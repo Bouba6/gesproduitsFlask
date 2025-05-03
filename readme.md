@@ -22,6 +22,15 @@ Mot de passe :`password1`
 
 pour lancer le projet faites flask run --debug
 
+# Dependances principales
+
+Flask
+Flask-Login
+Flask-WTF
+Flask-Migrate
+Flask-SQLAlchemy
+
+
 
 
 
