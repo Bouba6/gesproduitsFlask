@@ -4,23 +4,22 @@ document.getElementById("search").addEventListener("input", function (event) {
 
     async function searchProduct() {
         let search = document.getElementById("search").value;
-        let url = search ? `/search/${search}` : '';  // Si le champ est vide, on récupère tous les produits
+        let url = search ? `/search/${search}` : '';  
 
-        // Fetch pour récupérer les produits
+        
         fetch(url)
             .then(response => response.json())
             .then(data => {
                 console.log(data);
                 let products = document.getElementById("products");
-                products.innerHTML = "";  // On efface les anciens résultats
-
-                // Vérifier si des produits ont été retournés
+                products.innerHTML = "";  
+               
                 if (data.length === 0) {
                     products.innerHTML = "<p>Aucun produit trouvé.</p>";
                     return;
                 }
 
-                // Affichage des produits
+              
                 data.forEach(product => {
                     products.innerHTML += `
                         <div class="flex flex-col w-1/3">
@@ -50,6 +49,6 @@ document.getElementById("search").addEventListener("input", function (event) {
                 console.error("Erreur lors de la récupération des produits :", error);
             });
     }
-    
+
     searchProduct();
 });
