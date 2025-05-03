@@ -144,4 +144,4 @@ def update(id):
 
 @app.route("/logout")
 def logout():
-    return redirect("/usercreate")
+    return redirect("/login")
