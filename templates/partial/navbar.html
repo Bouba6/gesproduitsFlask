@@ -1,0 +1,96 @@
+<header class="sticky top-0 left-0 right-0 z-10">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex justify-center items-center w-24 h-24">
+                    <img src="image/MyLogo.png" alt="" class="object-contain max-w-full h-auto">
+                </div>
+
+                <!-- Mobile Actions (Burger + Cart) -->
+                <div class="flex items-center space-x-4 md:hidden">
+                    <!-- Mobile Cart -->
+                    <div class="relative">
+                        <a href="#" class="text-gray-700 hover:text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="8" cy="21" r="1" />
+                                <circle cx="19" cy="21" r="1" />
+                                <path
+                                    d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                            </svg>
+                            <span
+                                class="absolute cart-count -top-2 -right-3 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                                0
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Burger Menu Button -->
+                    <button id="burger-menu-button"
+                        class="flex items-center p-2 rounded-md hover:bg-gray-100 text-gray-700">
+                        <svg class="h-6 w-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Navigation Links - Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="{{url_for('home')}}"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md font-medium">Accueil</a>
+                    <a href="{{url_for('about')}}"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md font-medium">Commande</a>
+                    <a href="{{url_for('service')}}"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md font-medium">Produit</a>
+                    <a href="#" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md font-medium">A
+                        Propos</a>
+
+                    <div class="relative">
+                        <input type="text" name="search" id="search" placeholder="Search"
+                            class="py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <i class="fas fa-search absolute top-1/2 transform -translate-y-1/2 right-4 text-gray-400"></i>
+                    </div>
+                </div>
+
+                <!-- Right Section - Desktop -->
+                <div class="hidden md:flex items-center space-x-6">
+
+                    <div class="flex items-center space-x-3">
+                        <!-- <img src="image/image.png" alt="Profile"
+                            class="h-10 w-10 rounded-full object-cover border-2 border-primary" /> -->
+                        <a href="{{url_for('logout')}}"
+                            class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition duration-200">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="flex flex-col space-y-3 py-4">
+                    <a href="{{url_for('home')}}"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md font-medium">Accueil</a>
+                    <a href="{{url_for('about')}}"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md font-medium">Commande</a>
+                    <a href="{{url_for('service')}}"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md font-medium">Produit</a>
+                    <a href="#" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md font-medium">A
+                        Propos</a>
+
+                    <!-- Mobile Profile/Logout -->
+                    <div class="flex items-center justify-between px-3 pt-4 border-t border-gray-200">
+                        <!-- <img src="image/image.png" alt="Profile"
+                            class="h-10 w-10 rounded-full object-cover border-2 border-primary" /> -->
+                        <a href="#"
+                            class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition duration-200">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

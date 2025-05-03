@@ -50,6 +50,6 @@ document.getElementById("search").addEventListener("input", function (event) {
                 console.error("Erreur lors de la récupération des produits :", error);
             });
     }
-
+    
     searchProduct();
 });
